@@ -1,0 +1,49 @@
+var products = [
+//   {name: 'A',unitPrice: 100, quantity: 5, category: 'Electric Good' },
+//   {name: 'B',unitPrice: 200, quantity: 15, category: 'Techology' },
+//   {name: 'C',unitPrice: 400, quantity: 2, category: 'Agriculture' },
+//   {name: 'D',unitPrice: 50, quantity: 8, category: 'Electric Good' },
+//   {name: 'E',unitPrice: 70, quantity: 4, category: 'Electric Good' },
+//   {name: 'F',unitPrice: 500, quantity: 1, category: 'Industry' },
+//   {name: 'G',unitPrice: 10, quantity: 6, category: 'Industry' },
+//   {name: 'H',unitPrice: 150, quantity: 9, category: 'Economi' }
+// ];
+// //Filter cac san pham nam trong cung 1 category 
+// // tinh tong so tien hang con trong kho 
+// // // chon ra cac san pham co tien hang ton lon 
+// //  var ElecGroup = products.filter(function(item){
+// //           return item.category ==='Electric Good' ; 
+// //  })
+// //  ElecGroup 
+// //  var Allprice = products.reduce(function(x, obj){
+// //   return x + obj.quantity*obj.unitPrice ; 
+// //  },0); 
+// //  Allprice
+// var CheckOut = products.filter(function(item){
+
+//      return item.quantity*item.unitPrice > 600
+// }); 
+// CheckOut
+=================================================
+var listProducts = [
+ {id: 1, categoryId: 1, name: 'Tivi'},
+ {id: 2, categoryId: 1, name: 'Tủ lạnh'},
+ {id: 3, categoryId: 3, name: 'Ghế sofa'},
+ {id: 4, categoryId: 1, name: 'Máy giặt'},
+ {id: 5, categoryId: 2, name: 'Chén bát'},
+ {id: 6, categoryId: 2, name: 'Nồi cơm điện'},
+ {id: 7, categoryId: 3, name: 'Cửa kính'},
+ {id: 8, categoryId: 1, name: 'Điều hoà'},
+ {id: 9, categoryId: 3, name: 'Bàn tròn'},
+ {id: 10, categoryId: 2, name: 'Lò vi sóng'},
+]
+
+function filterProductsByCategoryId(products, categoryId) {
+    var result = []; 
+    result = products.filter(function(item){
+      return item.categoryId === categoryId ; 
+    });
+    return result ; 
+}
+filterProductsByCategoryId(listProducts, 1)
+=============================================================
